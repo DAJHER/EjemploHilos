@@ -13,9 +13,9 @@ public class StockRetriever implements Runnable{
         try {
             Stock stock = YahooFinance.get(compani);
             BigDecimal price = stock.getQuote().getPrice();
-            stock.print();
-            TestStock.suma = TestStock.suma.add(price);
-            System.out.println(TestStock.suma);
+            //stock.print();
+            TestStock.sumar(price);// = TestStock.suma.add(price);
+            //System.out.println(TestStock.suma);
         } catch (IOException ex) {
             System.out.println(ex.toString());
         }
